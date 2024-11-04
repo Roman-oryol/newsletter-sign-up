@@ -1,0 +1,10 @@
+:root {
+  --color-white: #ffffff;
+  --color-grey-25: rgba(25, 24, 43, 0.25);
+  --color-pale-navy: #36384d;
+  --color-dark-navy: #242742;
+  --color-vermellion: #ff6155;
+  --color-gradient-1: linear-gradient(#ff6a3a, #ff527b);
+
+  --font-family-primary: 'Roboto', 'Arial', sans-serif;
+}

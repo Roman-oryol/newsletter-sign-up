@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>Newsletter sign-up form</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="visually-hidden">Newsletter sign up</h1>
+      <article class="sign-up container">
+        <div class="sign-up__main">
+          <div class="sign-up__body">
+            <div class="sign-up__description">
+              <h2 class="heading">Stay updated!</h2>
+              <p>Join 60,000+ product managers receiving monthly updates on:</p>
+              <ul>
+                <li>Product discovery and building what matters</li>
+                <li>Measuring to ensure updates are a success</li>
+                <li>And much more!</li>
+              </ul>
+            </div>
+            <form class="sign-up__form" novalidate>
+              <div class="sign-up__form-field">
+                <label class="sign-up__label body-small" for="email"
+                  >Email address</label
+                >
+                <span
+                  class="sign-up__error-message body-small hidden"
+                  id="emailError"
+                  >Valid email required</span
+                >
+                <input
+                  class="sign-up__input"
+                  type="text"
+                  name="email"
+                  placeholder="email@company.com"
+                />
+              </div>
+              <button class="button">
+                <span>Subscribe to monthly newsletter</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="sign-up__success">
+          <div class="sign-up__success-message">
+            <h2 class="heading">Thanks for subscribing!</h2>
+            <p>
+              A confirmation email has been sent to
+              <span class="sign-up__success-email body-bold"
+                >ash@loremcompany.com</span
+              >. Please open it and click the button inside to confirm your
+              subscription
+            </p>
+          </div>
+          <button class="button" type="button">
+            <span>Dismiss message</span>
+          </button>
+        </div>
+      </article>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

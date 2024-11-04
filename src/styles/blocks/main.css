@@ -1,0 +1,9 @@
+.main {
+  height: 100%;
+
+  @media (min-width: 928px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

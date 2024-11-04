@@ -1,0 +1,157 @@
+.sign-up {
+  background-color: var(--color-white);
+
+  @media (min-width: 928px) {
+    padding: 24px;
+    border-radius: 36px;
+  }
+}
+
+.sign-up--show-success {
+  width: 504px;
+
+  .sign-up__main {
+    display: none;
+  }
+
+  .sign-up__success {
+    display: flex;
+  }
+}
+
+.sign-up__main {
+  @media (min-width: 928px) {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    column-gap: 24px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    aspect-ratio: 13.2 / 10;
+    background-image: url('/images/illustration-sign-up-mobile.svg');
+    background-size: cover;
+  }
+
+  @media (min-width: 928px) {
+    &::before {
+      aspect-ratio: auto;
+      order: 1;
+      background-image: url('/images/illustration-sign-up-desktop.svg');
+      border-radius: 16px;
+    }
+  }
+}
+
+.sign-up__body {
+  padding: 40px 24px;
+
+  @media (min-width: 928px) {
+    padding: 74px 40px;
+  }
+}
+
+.sign-up__description {
+  margin-bottom: 40px;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 21px 1fr;
+    column-gap: 16px;
+  }
+
+  li + * {
+    margin-top: 10px;
+  }
+
+  li::before {
+    content: '';
+    margin-top: 1px;
+    width: 21px;
+    height: 21px;
+    background-image: url('/images/icon-list.svg');
+    background-size: cover;
+  }
+}
+
+.sign-up__form-field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    'label error'
+    'email email';
+  row-gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sign-up__label {
+  grid-area: label;
+}
+
+.sign-up__input {
+  grid-area: email;
+  padding: 15px 24px;
+  border: 1px solid var(--color-grey-25);
+  border-radius: 8px;
+  color: var(--color-dark-navy);
+
+  &::placeholder {
+    color: var(--color-dark-navy);
+    opacity: 0.5;
+  }
+
+  &:focus {
+    border: 1px solid var(--color-dark-navy);
+    outline: none;
+  }
+}
+
+.sign-up__error-message {
+  grid-area: error;
+  text-align: right;
+  color: var(--color-vermellion);
+}
+
+/* Success message */
+
+.sign-up__success {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 149px 24px 40px;
+  height: 812px;
+
+  @media (min-width: 928px) {
+    height: auto;
+    padding: 24px 40px 40px;
+  }
+}
+
+.sign-up__success-message {
+  @media (min-width: 928px) {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 40px;
+    background-image: url('/images/icon-success.svg');
+    background-size: cover;
+  }
+}
