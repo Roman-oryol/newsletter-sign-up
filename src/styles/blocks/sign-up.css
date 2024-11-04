@@ -8,14 +8,16 @@
 }
 
 .sign-up--show-success {
-  width: 504px;
+  @media (min-width: 928px) {
+    width: 504px;
+  }
 
   .sign-up__main {
     display: none;
   }
 
   .sign-up__success {
-    display: flex;
+    display: block;
   }
 }
 
@@ -125,18 +127,20 @@
 
 .sign-up__success {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
+  /* flex-direction: column;
+  justify-content: space-between; */
   padding: 149px 24px 40px;
-  height: 812px;
+  /* height: 812px; */
 
   @media (min-width: 928px) {
-    height: auto;
+    /* height: auto; */
     padding: 24px 40px 40px;
   }
 }
 
 .sign-up__success-message {
+  margin-bottom: 263px;
+
   @media (min-width: 928px) {
     margin-bottom: 40px;
   }
