@@ -14,9 +14,6 @@
 
   .sign-up__main {
     display: none;
-    opacity: 0;
-    transform: translateY(-10px); /* Плавный уход вверх */
-    pointer-events: none; /* Игнорирует события при скрытии */
   }
 
   .sign-up__success {
@@ -25,10 +22,6 @@
 }
 
 .sign-up__main {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 1;
-  transform: translateY(0);
-
   @media (min-width: 928px) {
     display: grid;
     grid-template-columns: 1fr 400px;
@@ -114,7 +107,6 @@
   color: var(--color-dark-navy);
   transition: all 1s ease;
 
-
   &::placeholder {
     color: var(--color-dark-navy);
     opacity: 0.5;
@@ -143,13 +135,9 @@
 
 .sign-up__success {
   display: none;
-  /* flex-direction: column;
-  justify-content: space-between; */
   padding: 149px 24px 40px;
-  /* height: 812px; */
 
   @media (min-width: 928px) {
-    /* height: auto; */
     padding: 24px 40px 40px;
   }
 }
