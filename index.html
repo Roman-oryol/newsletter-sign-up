@@ -9,13 +9,17 @@
       sizes="32x32"
       href="./src/assets/images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./src/styles/style.css" />
     <title>Newsletter sign-up form</title>
   </head>
   <body>
     <main class="main">
       <h1 class="visually-hidden">Newsletter sign up</h1>
-      <article class="sign-up sign-up--show-success container">
+      <article class="sign-up container" id="signUp">
         <div class="sign-up__main">
           <div class="sign-up__body">
             <div class="sign-up__description">
@@ -27,16 +31,15 @@
                 <li>And much more!</li>
               </ul>
             </div>
-            <form class="sign-up__form" novalidate>
+            <form class="sign-up__form" id="sign-up-form" novalidate>
               <div class="sign-up__form-field">
                 <label class="sign-up__label body-small" for="email"
                   >Email address</label
                 >
                 <span
-                  class="sign-up__error-message body-small hidden"
+                  class="sign-up__error-message body-small"
                   id="emailError"
-                  >Valid email required</span
-                >
+                ></span>
                 <input
                   class="sign-up__input"
                   type="text"
@@ -44,7 +47,7 @@
                   placeholder="email@company.com"
                 />
               </div>
-              <button class="button">
+              <button class="sign-up__submit button">
                 <span>Subscribe to monthly newsletter</span>
               </button>
             </form>
@@ -55,13 +58,11 @@
             <h2 class="heading">Thanks for subscribing!</h2>
             <p>
               A confirmation email has been sent to
-              <span class="sign-up__success-email body-bold"
-                >ash@loremcompany.com</span
-              >. Please open it and click the button inside to confirm your
-              subscription
+              <span class="sign-up__success-email body-bold"></span>. Please
+              open it and click the button inside to confirm your subscription
             </p>
           </div>
-          <button class="button" type="button">
+          <button class="button" type="button" id="dismissButton">
             <span>Dismiss message</span>
           </button>
         </div>

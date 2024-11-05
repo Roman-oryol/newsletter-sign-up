@@ -14,6 +14,9 @@
 
   .sign-up__main {
     display: none;
+    opacity: 0;
+    transform: translateY(-10px); /* Плавный уход вверх */
+    pointer-events: none; /* Игнорирует события при скрытии */
   }
 
   .sign-up__success {
@@ -22,6 +25,10 @@
 }
 
 .sign-up__main {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0);
+
   @media (min-width: 928px) {
     display: grid;
     grid-template-columns: 1fr 400px;
@@ -105,6 +112,8 @@
   border: 1px solid var(--color-grey-25);
   border-radius: 8px;
   color: var(--color-dark-navy);
+  transition: all 1s ease;
+
 
   &::placeholder {
     color: var(--color-dark-navy);
@@ -115,6 +124,13 @@
     border: 1px solid var(--color-dark-navy);
     outline: none;
   }
+}
+
+.sign-up__input--error {
+  border: 1px solid var(--color-vermellion);
+  background-color: rgba(255, 97, 85, 0.15);
+  color: var(--color-vermellion);
+  transition: all 0.5s ease;
 }
 
 .sign-up__error-message {
